@@ -1,4 +1,4 @@
-package java_hw_62;
+package java_hw_63;
 
 public interface Pricable {
 

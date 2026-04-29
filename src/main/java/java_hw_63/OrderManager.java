@@ -1,4 +1,4 @@
-package java_hw_62;
+package java_hw_63;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -11,7 +11,7 @@ public class OrderManager {
     public void addOrder(Order order) throws DuplicateOrderException {
         for (Order o : orders) {
             if (o.getOrderNumber() == order.getOrderNumber()) {
-                throw new DuplicateOrderException("Замовлення №" + order.getOrderNumber() + " вже існує!");
+                throw new DuplicateOrderException("Order №" + order.getOrderNumber() + " already exist!");
             }
         }
         orders.add(order);
@@ -20,7 +20,7 @@ public class OrderManager {
     public void removeOrderByNumber(int orderNumber) throws OrderNotFoundException {
         boolean removed = orders.removeIf(o -> o.getOrderNumber() == orderNumber);
         if (!removed) {
-            throw new OrderNotFoundException("Замовлення №" + orderNumber + " не знайдено для видалення.");
+            throw new OrderNotFoundException("Order №" + orderNumber + " not found for removing.");
         }
     }
 
@@ -30,22 +30,18 @@ public class OrderManager {
                 return order;
             }
         }
-        throw new OrderNotFoundException("Замовлення №" + orderNumber + " не знайдено.");
+        throw new OrderNotFoundException("Order №" + orderNumber + " not found.");
     }
 
-    // САМЕ ЦЬОГО МЕТОДУ ВАМ НЕ ВИСТАЧАЄ НА СКРІНШОТІ:
-    public void setOrderStatus(int orderNumber, String status) throws OrderNotFoundException, InvalidOrderStatusException {
-        if (!status.equals("NEW") && !status.equals("CANCELED") && !status.equals("COMPLETED")) {
-            throw new InvalidOrderStatusException("Статус '" + status + "' невалідний.");
-        }
+    public void setOrderStatus(int orderNumber, OrderStatus status) throws OrderNotFoundException {
         Order order = findOrderByNumber(orderNumber);
         order.setStatus(status);
     }
 
-    public List<Order> getOrdersByStatus(String status) {
+    public List<Order> getOrdersByStatus(OrderStatus status) {
         List<Order> result = new ArrayList<>();
         for (Order order : orders) {
-            if (order.getStatus().equalsIgnoreCase(status)) {
+            if (order.getStatus() == status) {
                 result.add(order);
             }
         }
@@ -54,11 +50,11 @@ public class OrderManager {
 
     public double calculateTotal(List<Order> ordersList) throws NoOrdersException {
         if (ordersList == null || ordersList.isEmpty()) {
-            throw new NoOrdersException("Список замовлень порожній.");
+            throw new NoOrdersException("List of orders is empty.");
         }
         double total = 0;
         for (Order order : ordersList) {
-            if ("NEW".equals(order.getStatus())) {
+            if (OrderStatus.NEW == order.getStatus()) {
                 total += order.getPrice();
             }
         }

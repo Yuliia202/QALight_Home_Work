@@ -2,13 +2,13 @@
 //Абстрактний метод double getPrice()
 //Звичайний метод void printOrderInfo(), який виводить номер замовлення та тип напою
 
-package java_hw_62;
+package java_hw_63;
 
 public abstract class Order implements Pricable, Printable {
     private int orderNumber;
-    private String status;
+    private OrderStatus status;
 
-    public Order(int orderNumber, String status) {
+    public Order(int orderNumber, OrderStatus status) {
         this.orderNumber = orderNumber;
         this.status = status;
     }
@@ -23,28 +23,24 @@ public abstract class Order implements Pricable, Printable {
         this.orderNumber = orderNumber;
     }
 
-    public String getStatus() {
+    // Оновлений геттер
+    public OrderStatus getStatus() {
         return status;
     }
 
-    public void setStatus(String status) {
+    // Оновлений сеттер
+    public void setStatus(OrderStatus status) {
         this.status = status;
     }
 
-    public String status() {
-        if ("CANCELED".equalsIgnoreCase(this.status)) {
-            return "CANCELED";
-        } else if ("COMPLETED".equalsIgnoreCase(this.status)) {
-            return "COMPLETED";
-        } else {
-            return "NEW";
-        }
-    }
+    /* Метод status() більше не потрібен, оскільки ми позбулися String.
+       Enum автоматично коректно виводиться при друку.
+    */
 
     @Override
     public void printOrderInfo() {
         System.out.println("Type: " + this.getClass().getSimpleName() +
                 " | Number: " + orderNumber +
-                " | Status: " + status());
+                " | Status: " + status);
     }
 }
