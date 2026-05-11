@@ -4,6 +4,8 @@ import java_hw_63.enums.CoffeeSize;
 import java_hw_63.enums.DessertType;
 import java_hw_63.enums.OrderStatus;
 import java_hw_63.enums.TeaType;
+import java_hw_63.exeptions.DuplicateOrderException;
+import java_hw_63.exeptions.OrderNotFoundException;
 
 import java.util.List;
 import java.util.Map;
