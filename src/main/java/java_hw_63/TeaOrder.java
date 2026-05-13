@@ -1,5 +1,8 @@
 package java_hw_63;
 
+import java_hw_63.enums.OrderStatus;
+import java_hw_63.enums.TeaType;
+
 public class TeaOrder extends Order implements Pricable {
     private TeaType type;
 

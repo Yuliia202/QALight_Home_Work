@@ -1,5 +1,8 @@
 package java_hw_63;
 
+import java_hw_63.enums.DessertType;
+import java_hw_63.enums.OrderStatus;
+
 public class DessertOrder extends Order implements Pricable {
     private DessertType dessertType;
 

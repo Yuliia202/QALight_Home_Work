@@ -1,13 +1,7 @@
-package java_hw_63;
+package java_hw_63.exeptions;
 
 public class OrderNotFoundException extends Exception {
     public OrderNotFoundException(String message) {
-        super(message);
-    }
-}
-
-class DuplicateOrderException extends Exception {
-    public DuplicateOrderException(String message) {
         super(message);
     }
 }
@@ -18,8 +12,3 @@ class InvalidOrderStatusException extends Exception {
     }
 }
 
-class NoOrdersException extends Exception {
-    public NoOrdersException(String message) {
-        super(message);
-    }
-}

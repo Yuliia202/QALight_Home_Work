@@ -1,5 +1,8 @@
 package java_hw_63;
 
+import java_hw_63.enums.CoffeeSize;
+import java_hw_63.enums.OrderStatus;
+
 public class CoffeeOrder extends Order implements Pricable {
     private CoffeeSize size;
 

@@ -4,6 +4,8 @@
 
 package java_hw_63;
 
+import java_hw_63.enums.OrderStatus;
+
 public abstract class Order implements Pricable, Printable {
     private int orderNumber;
     private OrderStatus status;
