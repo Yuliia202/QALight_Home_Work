@@ -23,7 +23,6 @@ public class LogInTab {
         try {
             driver.get("https://mbooks.com.ua/");
             driver.manage().window().maximize();
-
             WebElement profileButton = waiter.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@data-cy='open-profile-dropdown']")));
             profileButton.click();
             WebElement LogInButton = waiter.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@data-cy='open-login-modal-btn']")));
@@ -33,13 +32,10 @@ public class LogInTab {
             WebElement getCodeButton = waiter.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@type='submit']")));
             getCodeButton.click();
             waiter.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@role='dialog']")));
-
             WebElement codeInput = waiter.until(ExpectedConditions.visibilityOfElementLocated(
                     By.xpath("//input[@autocomplete='one-time-code']")
             ));
-
             assertTrue(codeInput.isDisplayed(), "Filed for code is not displayed!");
-
         } finally {
             driver.quit();
         }
