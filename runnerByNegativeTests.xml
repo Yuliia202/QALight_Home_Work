@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Negative Test Suite">
+    <test name="Negative Tests Only">
+        <groups>
+            <run>
+                <include name="negative"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="aqa_hw5.CatalogAndPromoTests"/>
+            <class name="aqa_hw5.SearchWithDataTests"/>
+            <class name="aqa_hw5.AuthNegativeTests"/>
+        </classes>
+    </test>
+</suite>
