@@ -5,7 +5,7 @@
 <suite name="Full Regression Suite">
     <test name="All Automation Tests">
         <packages>
-            <package name="aqa_hw5"/>
+            <package name="aqa_hw7"/>
         </packages>
     </test>
 </suite>
