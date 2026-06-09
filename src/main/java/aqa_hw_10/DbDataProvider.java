@@ -7,10 +7,9 @@ import java.util.Map;
 public class DbDataProvider {
 
     public static Pair<String, String> getUserInfo() {
-        // Використовуємо конструкцію try-with-resources для автоматичного закриття ресурсів
-        String url = "jdbc:mysql://109.197.216.90:13306/ATAM_db";
-        String user = "root";
-        String password = "6Ztz3rsrVNeWfbCH";
+        String url = "";
+        String user = "";
+        String password = "";
         String sql = "SELECT login, password FROM palchyk_usersDataTable";
 
         try (Connection connection = DriverManager.getConnection(url, user, password);

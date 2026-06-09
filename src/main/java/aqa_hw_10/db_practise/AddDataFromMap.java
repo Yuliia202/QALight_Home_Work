@@ -11,9 +11,9 @@ public class AddDataFromMap {
     public static void main(String[] args) {
         Map<String, String> usersData = LocalStorage.getUSerInfo();
 
-        String url = "jdbc:mysql://109.197.216.90:13306/ATAM_db";
-        String user = "root";
-        String password = "6Ztz3rsrVNeWfbCH";
+        String url = "";
+        String user = "";
+        String password = "";
 
         String sql = "INSERT INTO palchyk_usersDataTable (login, password) VALUES (?, ?)";
 

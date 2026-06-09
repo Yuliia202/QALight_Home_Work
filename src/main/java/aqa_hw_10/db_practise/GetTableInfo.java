@@ -5,9 +5,9 @@ import java.sql.*;
 public class GetTableInfo {
 
     public static void main(String[] args) {
-        String url = "jdbc:mysql://109.197.216.90:13306/ATAM_db";
-        String user = "root";
-        String password = "6Ztz3rsrVNeWfbCH";
+        String url = "";
+        String user = "";
+        String password = "";
         String tableName = "palchyk_usersDataTable";
 
         try (Connection conn = DriverManager.getConnection(url, user, password)) {

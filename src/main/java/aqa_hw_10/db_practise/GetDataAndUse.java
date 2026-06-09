@@ -9,9 +9,9 @@ public class GetDataAndUse {
     public static void main(String[] args) {
         Map<String, String> usersData = new HashMap<>();
 
-        String url = "jdbc:mysql://109.197.216.90:13306/ATAM_db";
-        String user = "root";
-        String password = "6Ztz3rsrVNeWfbCH";
+        String url = "";
+        String user = "";
+        String password = "";
 
         try {
             Connection connection = DriverManager.getConnection(url, user, password);

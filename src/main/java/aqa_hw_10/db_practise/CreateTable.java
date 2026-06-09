@@ -8,9 +8,9 @@ import java.sql.Statement;
 public class CreateTable {
 
     public static void main(String[] args) {
-        String url = "jdbc:mysql://109.197.216.90:13306/ATAM_db";
-        String user = "root";
-        String password = "6Ztz3rsrVNeWfbCH";
+        String url = "";
+        String user = "";
+        String password = "";
 
         String sql = "CREATE TABLE IF NOT EXISTS palchyk_usersDataTable (" +
                 "id INT AUTO_INCREMENT PRIMARY KEY, " +
