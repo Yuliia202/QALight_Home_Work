@@ -1,0 +1,1 @@
+{"uuid":"112855e9-d4c8-418d-898b-e0cb170fee95","name":"aqa_hw10.BaseTest.setUp","children":["39e09131-e735-48a8-bdeb-87cf0b6c26db"],"description":"","befores":[{"name":"setUp","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1781030212405,"stop":1781030219128}],"afters":[],"start":1781030212404,"stop":1781030219129}
